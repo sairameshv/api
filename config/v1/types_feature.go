@@ -161,7 +161,7 @@ var FeatureSets = map[FeatureSet]*FeatureGateEnabledDisabled{
 	CustomNoUpgrade: {
 		Enabled: []FeatureGateDescription{},
 		Disabled: []FeatureGateDescription{
-			disableKubeletCloudCredentialProviders, // We do not currently ship the correct config to use the external credentials provider.
+			// disableKubeletCloudCredentialProviders, // We do not currently ship the correct config to use the external credentials provider.
 		},
 	},
 	TechPreviewNoUpgrade: newDefaultFeatures().
@@ -191,7 +191,7 @@ var FeatureSets = map[FeatureSet]*FeatureGateEnabledDisabled{
 		with(sdnLiveMigration).
 		with(mixedCPUsAllocation).
 		with(managedBootImages).
-		without(disableKubeletCloudCredentialProviders).
+//		without(disableKubeletCloudCredentialProviders).
 		toFeatures(defaultFeatures),
 	LatencySensitive: newDefaultFeatures().
 		toFeatures(defaultFeatures),
@@ -211,7 +211,7 @@ var defaultFeatures = &FeatureGateEnabledDisabled{
 		buildCSIVolumes,
 	},
 	Disabled: []FeatureGateDescription{
-		disableKubeletCloudCredentialProviders, // We do not currently ship the correct config to use the external credentials provider.
+	//	disableKubeletCloudCredentialProviders, // We do not currently ship the correct config to use the external credentials provider.
 	},
 }
 
