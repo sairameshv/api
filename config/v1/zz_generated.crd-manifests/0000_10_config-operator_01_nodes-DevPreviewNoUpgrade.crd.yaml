@@ -55,7 +55,7 @@ spec:
                 type: string
                 x-kubernetes-validations:
                 - message: cgroups v1 is not supported on openshift anymore
-                  rule: self != "v1"
+                  rule: self == "v1"
               minimumKubeletVersion:
                 description: |-
                   minimumKubeletVersion is the lowest version of a kubelet that can join the cluster.

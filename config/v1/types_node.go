@@ -77,7 +77,7 @@ type NodeStatus struct {
 }
 
 // +kubebuilder:validation:Enum=v1;v2;""
-// +kubebuilder:validation:XValidation:rule="self != \"v1\"",message="cgroups v1 is not supported on openshift anymore"
+// +kubebuilder:validation:XValidation:rule="self == \"v1\"",message="cgroups v1 is not supported on openshift anymore"
 type CgroupMode string
 
 const (
