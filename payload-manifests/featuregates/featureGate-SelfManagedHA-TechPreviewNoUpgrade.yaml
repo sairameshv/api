@@ -137,9 +137,6 @@
                         "name": "DyanmicServiceEndpointIBMCloud"
                     },
                     {
-                        "name": "DynamicResourceAllocation"
-                    },
-                    {
                         "name": "EtcdBackendQuota"
                     },
                     {
